@@ -1,8 +1,8 @@
+import { useDispatch } from 'react-redux';
+import { addItem } from './CartSlice';
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
-import { useDispatch } from 'react-redux';
-import { addItem } from './CartSlice';
 function ProductList({ onHomeClick }) {
     const dispatch = useDispatch();
     const [showCart, setShowCart] = useState(false);
@@ -323,4 +323,3 @@ function ProductList({ onHomeClick }) {
 }
 
 export default ProductList;
-export const { addItem, removeItem, updateQuantity } = CartSlice.actions;
